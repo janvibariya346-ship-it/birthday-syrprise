@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Forever Person 💗</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; text-align: center; color: #7b254b;
+  font-family: Georgia, serif;
+  background: linear-gradient(140deg,#ffe0ec,#fff7fa,#f7c7dc);
+}
+main { max-width: 850px; margin: auto; padding: 35px 18px 60px; }
+h1 { font-size: clamp(38px,8vw,65px); text-shadow: 0 0 20px #ff9fca; }
+h2 { color: #b52d69; }
+p { font-size: 17px; line-height: 1.9; }
+button {
+  border: 0; border-radius: 30px; padding: 14px 23px;
+  background: #c82d70; color: white; font-size: 16px;
+  cursor: pointer; margin: 10px;
+}
+button:hover { transform: scale(1.04); }
+.card {
+  background: #ffffffbd; border: 1px solid #f5bad1;
+  border-radius: 22px; padding: 24px; margin: 22px 0;
+  box-shadow: 0 8px 30px #9b2b5420;
+}
+.gallery {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+}
+.gallery img {
+  width: 100%; height: 230px; object-fit: cover;
+  border-radius: 16px; border: 2px solid white;
+}
+.gallery img:first-child { grid-column: span 2; height: 300px; }
+.caption { font-size: 13px; margin-top: 5px; }
+#letter, #memories { display: none; }
+iframe { width: 100%; max-width: 560px; aspect-ratio: 16/9;
+  border: 0; border-radius: 15px; }
+.heart {
+  position: fixed; bottom: -30px; animation: float 7s linear forwards;
+  pointer-events: none;
+}
+@keyframes float {
+  to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+.signature { font-size: 22px; font-style: italic; color: #c12b6a; }
+@media(max-width: 450px) {
+  .gallery img { height: 180px; }
+  .gallery img:first-child { height: 230px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <p>💌 A little surprise for someone irreplaceable</p>
+  <h1>Happy Birthday, My Girl! 🎂</h1>
+  <p>To the person who stayed, cared, and never let me feel alone. 💗</p>
+
+  <div class="card">
+    <div style="font-size:85px">🎂🕯️</div>
+    <h2>Today is all about YOU!</h2>
+    <p>I've made a little world of memories just for you.</p>
+    <button onclick="reveal()">Open Your Surprise 💝</button>
+  </div>
+
+  <section id="memories" class="card">
+    <h2>Our Little World 📸</h2>
+    <p>Different days, different memories, one special bond.</p>
+    <div class="gallery">
+      <div>
+        <img src="angellll.jpeg" alt="Our school memory">
+        <p class="caption">Where our memories began 🌷</p>
+      </div>
+      <div>
+        <img src="bhsgdyhc.jpeg"Our favourite photo">
+        <p class="caption">My favourite human 💗</p>
+      </div>
+      <div>
+        <img src="bday.jpg" alt="A recent memory">
+        <p class="caption">Still us, through everything 🫂</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="letter" class="card">
+    <h2>Dear My Forever Person 🥹💗</h2>
+    <p>Happiest Birthday, mitrrrr 🎀</p>
+    <p>
+      Sometimes I wonder how lucky I am to have someone like you.
+      School life ended, things changed, and life took us through
+      different journeys, but you never stopped being a special
+      part of my life.
+    </p>
+    <p>
+      You stayed beside me even during my hardest situations.
+      You took care of me, listened to me, supported me, and
+      reminded me that I wasn't alone. You may not even realise
+      how much your little efforts mean to me, but I notice them
+      and I treasure every single one.
+    </p>
+    <p>
+      Thank you for being there when things weren't okay.
+      Thank you for understanding me, for caring about me,
+      and for being someone I can turn to. I will always be
+      grateful for the beautiful bond we share.
+    </p>
+    <p>
+      On your birthday, I wish you a life full of happiness,
+      peace, success, genuine love, and countless reasons to smile.
+      I hope every dream in your heart finds its way to you.
+    </p>
+    <p>
+      And whenever life feels difficult for you, I hope you
+      remember that you deserve the same care and love that
+      you have always given me. I want to be there for you,
+      cheer for you, and celebrate every little victory with you.
+    </p>
+    <p>
+      Even though school life is behind us, I hope we keep
+      making memories for years and years to come.
+      Some people become memories, but you became someone
+      I want to keep in my life. 🦋
+    </p>
+    <h2>Happy Birthday, My Favourite Person! 🎂</h2>
+    <p class="signature">I love you so, so much. Always here for you. 💗</p>
+
+    <button onclick="showMusic()">A Song For You 🎵</button>
+    <div id="music" style="display:none">
+      <p>This song reminds me of our bond. 🫂</p>
+      <iframe
+        src="https://www.youtube.com/embed/EatzcaVJRMs"
+        title="Tera Yaar Hoon Main - T-Series"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <p class="caption">Tap Play to listen to our friendship song.</p>
+    </div>
+
+    <button onclick="finalMessage()">One Last Thing 💌</button>
+    <p id="final" style="display:none">
+      No matter how many birthdays pass, I will always wish
+      the very best for you. Thank you for being YOU.
+      Forever grateful for you. 💗🫂🌷
+    </p>
+  </section>
+  <p>Made with all my heart, just for you. ♡</p>
+</main>
+
+<script>
+function reveal() {
+  document.getElementById("memories").style.display = "block";
+  document.getElementById("letter").style.display = "block";
+  document.querySelector("main").scrollIntoView({behavior:"smooth"});
+  for(let i=0;i<30;i++) setTimeout(heart, i*120);
+}
+function showMusic() {
+  document.getElementById("music").style.display = "block";
+  document.getElementById("music").scrollIntoView({behavior:"smooth"});
+}
+function finalMessage() {
+  document.getElementById("final").style.display = "block";
+  document.getElementById("final").scrollIntoView({behavior:"smooth"});
+  for(let i=0;i<20;i++) setTimeout(heart,i*120);
+}
+function heart() {
+  const h = document.createElement("span");
+  h.className = "heart";
+  h.textContent = ["💗","💕","💖","🌸","🦋"][Math.floor(Math.random()*5)];
+  h.style.left = Math.random()*100+"vw";
+  h.style.fontSize = (18+Math.random()*24)+"px";
+  h.style.animationDuration = (4+Math.random()*4)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8500);
+}
+</script>
+</body>
+</html>
